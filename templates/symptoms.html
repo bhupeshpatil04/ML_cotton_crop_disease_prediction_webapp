@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptoms</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F5F5FA;
+            color: #333;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        h1 {
+            color: #004080;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 20px;
+        }
+
+        .text {
+            flex: 1;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: 400px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            width: 300px;
+            border-radius: 20px;
+            margin: 40px;
+
+
+
+            /* --s: 250px;   the size of the image */
+            /* --b: 8px;     the border thickness */
+            /* --g: 14px;    the gap */
+            /* the color  --c: #004080;  */
+
+            width: var(--s);
+            aspect-ratio: 1;
+            outline: calc(var(--s)/2) solid #0009;
+            outline-offset: calc(var(--s)/-2);
+            cursor: pointer;
+            transition: .3s;
+
+        }
+
+        img:hover {
+            outline: var(--b) solid var(--c);
+            outline-offset: var(--g);
+        }
+
+        h2 {
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .container1 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .container2 {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .main {
+            font-size: 20px;
+            text-align: centre;
+            color: #0066cc;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 65px;
+            background-color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: right;
+            /* Align items to the right and left */
+            align-items: center;
+            /* Center items vertically */
+            font-size: 1.1rem;
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .2);
+        }
+
+        .navbar a {
+            color: #333;
+            text-decoration: none;
+            padding: 14px 21px;
+            margin-right: 22px;
+        }
+        
+        .navbar a:last-child {
+            float: right;
+            /* Align the "Login" link to the right */
+            background-color: #4CAF50;
+            /* Adding a background color for the "Login" link */
+            color: #fff;
+            /* Changing text color for the "Login" link */
+            border-radius: 5px;
+            /* Adding border-radius for a button-like appearance */
+            /* height: 20px; */
+        }
+        
+        .navbar a:last-child:hover {
+            background-color: #45a049;
+            /* Change background color on hover */
+        }
+
+        
+        
+        @media screen and (max-width: 768px) {
+            .navbar {
+                height: auto;
+            }
+            
+            .navbar a {
+                float: none;
+                display: block;
+                text-align: center;
+                color: white;
+            }
+        }
+        
+        .footer {
+            background-color: #333333e6;
+            height: 60px;
+            font-size: 1.17rem;
+            text-align: center;
+            justify-content: center;
+            color: black;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('symptoms') }}">Symptoms</a>
+        <a href="{{ url_for('precaution') }}">Precaution</a>
+        <a href="{{ url_for('login') }}">Login</a>
+    </div>
+    
+
+    <!-- <h1>Cotton Disease Symptoms</h1> -->
+    <!-- <a href="index.html" class="previous">&laquo; Previous</a> -->
+    <div class="container">
+        <div class="text">
+            <h2>Alternaria</h2>
+            <p>
+                Small, circular brown lesions on cotyledons and
+                seedling leaves which expand and develop a
+                concentric pattern; necrotic areas coalesce
+                and often have a purple margin; centers of
+                lesions may dry out and drop form the plant
+                creating a "shot-hole" appearance on the leaves.
+
+            </p>
+            <p>
+                बीजपत्रों और अंकुर की पत्तियों पर छोटे, गोलाकार भूरे रंग के घाव
+                जो एक संकेंद्रित पैटर्न का विस्तार और विकास करते हैं; परिगलित
+                क्षेत्र आपस में जुड़ जाते हैं और अक्सर बैंगनी रंग का किनारा होता
+                है; घावों के केंद्र सूख सकते हैं और पौधे से गिर सकते हैं जिससे
+                पत्तियों पर "शॉट-होल" जैसा दृश्य बन जाता है।
+            </p>
+            <p>
+                कोटिलेडॉन्स आणि रोपांच्या पानांवर लहान, गोलाकार तपकिरी घाव जे
+                एकाग्र पॅटर्नचा विस्तार करतात आणि विकसित करतात; नेक्रोटिक क्षेत्र
+                एकत्र होतात आणि बहुतेकदा जांभळा मार्जिन असतो; जखमांची केंद्रे
+                कोरडी होऊ शकतात आणि वनस्पती तयार होऊ शकतात आणि पानांवर "शॉट-होल" दिसू शकतात.
+            </p>
+
+        </div>
+        <div>
+            <img src="../static/images/alternaria-leaf-spot.jpg" alt="Cotton Disease Symptoms" width="500" height="500">
+        </div>
+    </div>
+
+    <div class="container container2">
+        <div class="text">
+            <h2>Armyworm </h2>
+            <p>
+                Holes in bracts associated with bolls; heavy feeding by young larvae
+                leads to skeletonized leaves; shallow, dry wounds on fruit; egg clusters
+                of 50-150 eggs may be present on the leaves; egg clusters are covered in
+                a whitish scale which gives the cluster a cottony or fuzzy appearance;
+                young larvae are pale green to yellow in color while older larvae are
+                generally darker green with a dark and light line running along the side
+                of their body and a pink or yellow underside.
+            </p>
+            <p>
+                बीजकोषों से जुड़े छालों में छेद; युवा लार्वा द्वारा भारी मात्रा में भोजन करने से पत्तियाँ कंकालयुक्त हो
+                जाती हैं;
+                फलों पर उथले, सूखे घाव; पत्तियों पर 50-150 अंडों के अंडे के समूह मौजूद हो सकते हैं; अंडों के गुच्छे
+                एक सफेद परत से ढके होते हैं जो गुच्छों को रुईदार या रोएँदार रूप देते हैं; युवा लार्वा हल्के हरे से पीले
+                रंग के होते हैं जबकि पुराने लार्वा आम तौर पर गहरे हरे रंग के होते हैं, उनके शरीर के किनारे पर एक
+                गहरी और हल्की रेखा होती है और नीचे गुलाबी या पीला रंग होता है।
+            </p>
+            <p>
+                बॉल्सशी संबंधित ब्रॅक्ट्समध्ये छिद्र; कोवळ्या अळ्यांनी जास्त आहार दिल्याने पानांचा कंकाल बनतो; फळांवर
+                उथळ,
+                कोरड्या जखमा; पानांवर 50-150 अंड्यांचे पुंजके असू शकतात; अंड्याचे पुंजके पांढऱ्या स्केलमध्ये झाकलेले
+                असतात जे क्लस्टरला सुती किंवा अस्पष्ट स्वरूप देतात; तरुण अळ्या फिकट हिरव्या ते पिवळ्या रंगाच्या असतात
+                तर जुन्या अळ्या सामान्यत: गडद हिरव्या असतात आणि त्यांच्या शरीराच्या बाजूला एक गडद आणि हलकी रेषा
+                असते आणि खाली गुलाबी किंवा पिवळी असते.
+            </p>
+
+        </div>
+        <div>
+            <img src="../static/images/Armyworm.png" alt="Cotton Disease Symptoms" width="500" height="500">
+        </div>
+    </div>
+    <div class="container">
+        <div class="text">
+            <h2>Cercospora leaf spot</h2>
+            <p>
+                Circular red lesions on leaves which enlarge and
+                turn white or gray in the center; lesions often
+                have a pattern of concentric rings and possess a
+                red margin; dark gray spore masses form in the
+                centers of the lesions making them appear dark gray.
+            </p>
+            <p>
+                पत्तियों पर गोलाकार लाल घाव जो बड़े हो जाते हैं और बीच में सफेद
+                या भूरे रंग में बदल जाते हैं; घावों में अक्सर संकेंद्रित छल्लों का पैटर्न
+                होता है और उनमें लाल किनारा होता है; घावों के केंद्र में गहरे भूरे रंग
+                के बीजाणु समूह बन जाते हैं जिससे वे गहरे भूरे रंग के दिखाई देते हैं।
+            </p>
+            <p>
+                पानांवर गोलाकार लाल घाव जे मोठे होतात आणि मध्यभागी पांढरे
+                किंवा राखाडी होतात; जखमांमध्ये सहसा एकाग्र रिंगांचा नमुना
+                असतो आणि लाल मार्जिन असतो; घावांच्या मध्यभागी गडद राखाडी
+                बीजाणू तयार होतात ज्यामुळे ते गडद राखाडी दिसतात.
+            </p>
+
+        </div>
+        <div>
+            <img src="../static/images/Cercospora leaf spot.jpg" alt="Cotton Disease Symptoms" width="500" height="500">
+        </div>
+    </div>
+    <div class="container container2">
+        <div class="text">
+            <h2>Fusarium wilt</h2>
+            <p>
+                Wilting of cotyledons and seedling leaves; cotyledons become chlorotic
+                at the edges and then necrotic; older plants exhibit symptoms of
+                wilting and leaf chlorosis; wilting is usually gradual but may
+                be pronounced after heavy summer rain; if infection is severe
+                plants become stunted and may be killed; vascular system of
+                infected plants becomes discolored and can be seen by cutting the stem.
+            </p>
+            <p>
+                बीजपत्रों और अंकुरों की पत्तियों का मुरझाना; बीजपत्र किनारों पर हरितहीन और फिर परिगलित हो जाते हैं;
+                पुराने पौधे मुरझाने और पत्ती हरितहीनता के लक्षण प्रदर्शित करते हैं; मुरझाना आमतौर पर
+                धीरे-धीरे होता है लेकिन भारी गर्मी की बारिश के बाद स्पष्ट हो सकता है; यदि संक्रमण गंभीर
+                है तो पौधे बौने हो जाते हैं और मर सकते हैं; संक्रमित पौधों का संवहनी तंत्र बदरंग हो जाता है और तने
+                को काटने पर देखा जा सकता है।
+            </p>
+            <p>
+                cotyledons आणि बीपासून नुकतेच तयार झालेले रोप पाने विल्टिंग; cotyledons कडा क्लोरोटिक
+                आणि नंतर necrotic होतात; जुनी झाडे कोमेजणे आणि पाने क्लोरोसिसची लक्षणे दर्शवितात;
+                कोमेजणे सामान्यतः हळूहळू असते परंतु उन्हाळ्याच्या जोरदार पावसानंतर उच्चारले जाऊ शकते;
+                जर संसर्ग गंभीर असेल तर झाडे खुंटतात आणि मरतात; संक्रमित वनस्पतींची रक्तवहिन्यासंबंधी
+                प्रणाली विकृत होते आणि स्टेम कापून दिसू शकते.
+            </p>
+
+        </div>
+        <div>
+            <img src="../static/images/Fusarium wilt.png" alt="Cotton Disease Symptoms" width="500" height="500">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="text">
+            <h2>Target spot</h2>
+            <p>
+                The symptoms can be found on leaves, boll bracts and on bolls. Initially the
+                appearance of small chocolate brown spots which later enlarge to become
+                circular to irregular spot with target markings. The symptoms are mainly
+                seen in the lower canopy. Typically the infected leaves retain their green
+                color or green yellow color. Under severe conditions leaf and flower drop
+                may occur.
+            </p>
+            <p>
+                लक्षण पत्तियों, बीजकोषों की शाखाओं और बीजकोषों पर पाए जा सकते हैं। प्रारंभ में छोटे चॉकलेट
+                भूरे रंग के धब्बे दिखाई देते हैं जो बाद में बड़े होकर लक्ष्य चिह्नों के साथ गोलाकार से अनियमित
+                धब्बे बन जाते हैं। लक्षण मुख्यतः निचली छतरी में दिखाई देते हैं। आमतौर पर संक्रमित पत्तियां अपना
+                हरा रंग या हरा पीला रंग बरकरार रखती हैं। गंभीर परिस्थितियों में पत्ती और फूल झड़ सकते हैं।
+            </p>
+            <p>
+                याची लक्षणे पानांवर, बोंडावर आणि बोंडांवर आढळतात. सुरुवातीला लहान चॉकलेटी तपकिरी ठिपके दिसणे जे
+                नंतर मोठे होऊन गोल ते अनियमित स्पॉट बनतात आणि लक्ष्य चिन्हांसह. लक्षणे प्रामुख्याने खालच्या छतमध्ये
+                दिसतात.
+                सामान्यतः संक्रमित पाने त्यांचा हिरवा रंग किंवा हिरवा पिवळा रंग टिकवून ठेवतात. गंभीर परिस्थितीत पाने आणि
+                फुलांची
+                गळती होऊ शकते.
+            </p>
+
+        </div>
+        <div>
+            <img src="../static/images/Target spot.jpg" alt="Cotton Disease Symptoms" width="400" height="300">
+        </div>
+    </div>
+    <div class="container container2">
+        <div class="text">
+            <h2>Bacterial blight/angular leaf spot of cotton</h2>
+            <p>
+                Water-soaked spots on leaves which are delimited by
+                leaf veins, giving them an angular appearance; lesions
+                increase in size and turn black and necrotic; leaves drop
+                from the plant; disease may also cause elongated gray-black
+                lesions extending from the leaves to petioles and stem
+                which are known as the "blackarm" phase; severe blackarm
+                symptoms may cause the stem to be girdled; water-soaked lesions
+                may be present on bolls; boll lesions enlarge and become sunken
+                and brown-black in color.
+            </p>
+            <p>
+                पत्तियों पर पानी से लथपथ धब्बे जो पत्ती शिराओं द्वारा सीमांकित होते हैं, जिससे उन्हें
+                कोणीय रूप मिलता है; घाव आकार में बढ़ जाते हैं और काले और परिगलित हो जाते हैं;
+                पौधे से पत्तियाँ गिरती हैं; रोग के कारण पत्तियों से लेकर डंठलों और तने तक लंबे भूरे-काले
+                घाव भी हो सकते हैं, जिन्हें "ब्लैकआर्म" चरण के रूप में जाना जाता है; गंभीर ब्लैकआर्म लक्षणों
+                के कारण तना सिकुड़ सकता है; बीजकोषों पर पानी से लथपथ घाव मौजूद हो सकते हैं;
+                बीजकोष के घाव बड़े हो जाते हैं और धँसे हुए तथा भूरे-काले रंग के हो जाते हैं।
+            </p>
+            <p>
+                पानांवर पाण्याने भिजलेले डाग जे पानांच्या शिरांद्वारे मर्यादित आहेत, त्यांना टोकदार स्वरूप देतात;
+                घाव आकारात वाढतात आणि काळे आणि नेक्रोटिक होतात; झाडापासून पाने गळतात; रोगामुळे
+                पानांपासून पेटीओल्स आणि स्टेमपर्यंत वाढलेले राखाडी-काळे विकृती देखील होऊ शकतात ज्याला
+                "ब्लॅकर्म" फेज म्हणून ओळखले जाते; काळ्या रंगाच्या गंभीर लक्षणांमुळे स्टेम कमरबंद होऊ शकतो;
+                पाण्याने भिजलेले घाव बोटांवर असू शकतात; बोंडाचे घाव मोठे होतात आणि बुडतात आणि तपकिरी-काळ्या रंगाचे
+                होतात.
+            </p>
+
+        </div>
+        <div>
+            <img src="../static/images/Bacterial blight angular leaf spot of cotton.jpg" alt="Cotton Disease Symptoms" width="500"
+                height="500">
+        </div>
+    </div>
+    <div class="container">
+        <div class="text">
+            <h2>Aphids (Cotton aphid) </h2>
+            <p>
+                Small soft bodied insects on underside of leaves and/or
+                stems of plant; usually green or yellow in color, but may
+                be pink, brown, red or black depending on species and host plant;
+                if aphid infestation is heavy it may cause leaves to yellow and/or
+                distorted, necrotic spots on leaves and/or stunted shoots; aphids
+                secrete a sticky, sugary substance called honeydew which encourages
+                the growth of sooty mold on the plants.
+            </p>
+            <p>
+                पत्तियों और/या पौधे के तनों के नीचे छोटे मुलायम शरीर वाले कीड़े; आमतौर पर हरा या पीला रंग,
+                लेकिन प्रजाति और मेजबान पौधे के आधार पर गुलाबी, भूरा, लाल या काला हो सकता है;
+                यदि एफिड का संक्रमण भारी है तो इससे पत्तियां पीली हो सकती हैं और/या विकृत हो सकती हैं,
+                पत्तियों पर नेक्रोटिक धब्बे पड़ सकते हैं और/या अंकुर बौने हो सकते हैं; एफिड्स हनीड्यू नामक
+                एक चिपचिपा, शर्करायुक्त पदार्थ स्रावित करते हैं जो पौधों पर कालिखयुक्त फफूंद के विकास को प्रोत्साहित
+                करता है।
+            </p>
+            <p>
+                झाडाच्या पानांच्या आणि/किंवा देठाच्या खालच्या बाजूला लहान मऊ शरीराचे कीटक; सहसा हिरवा
+                किंवा पिवळा रंग असतो, परंतु प्रजाती आणि यजमान वनस्पतींवर अवलंबून गुलाबी, तपकिरी, लाल
+                किंवा काळा असू शकतो; जर ऍफिडचा प्रादुर्भाव जास्त असेल तर त्यामुळे पाने पिवळी आणि/किंवा
+                विकृत होऊ शकतात, पानांवर आणि/किंवा खुंटलेल्या कोंबांवर नेक्रोटिक स्पॉट्स होऊ शकतात;
+                ऍफिड्स मधमाशी नावाचा एक चिकट, शर्करायुक्त पदार्थ स्राव करतात ज्यामुळे झाडांवर काजळीच्या
+                बुरशीच्या वाढीस प्रोत्साहन मिळते.
+            </p>
+
+        </div>
+        <div>
+            <img src="../static/images/Aphids (Cotton aphid).jpg" alt="Cotton Disease Symptoms" width="400" height="400">
+        </div>
+    </div>
+    <div class="container container2">
+        <div class="text">
+            <h2>Asochyta blight Asochyta gossypii</h2>
+            <p>
+                Brown or gray spots on leaves surrounded
+                by a red halo; elongated red-purple
+                cankers on stems cause the wilting and
+                death of leaves above.
+
+            </p>
+            <p>
+                लाल प्रभामंडल से घिरी पत्तियों पर भूरे या भूरे धब्बे; तनों
+                पर लम्बे लाल-बैंगनी कैंकर ऊपर की पत्तियों के मुरझाने और
+                मरने का कारण बनते हैं।
+            </p>
+            <p>
+                लाल प्रभामंडलाने वेढलेल्या पानांवर तपकिरी किंवा राखाडी ठिपके;
+                देठावरील लांबलचक लाल-जांभळ्या कॅंकर्समुळे वरील पाने
+                कोमेजतात आणि मरतात.
+            </p>
+
+        </div>
+        <div>
+            <img src="../static/images/Asochyta blight Asochyta gossypii.jpg" alt="Cotton Disease Symptoms" width="500" height="500">
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="text">
+            <h2>Cotton bollworm </h2>
+            <p>
+                Holes chewed in bases of bolls and insect frass around holes;oung
+                caterpillars are cream-white in color with a black head and black hairs;
+                older larvae may be yellow-green to almost black in color with fine white
+                lines along their body and black spots at the base of hairs; eggs are laid
+                singly on both upper and lower leaf surfaces and are initially creamy white
+                but develop a brown-red ring after 24 hours and darken prior to hatching.
+            <p>
+                बीजकोषों के आधारों में चबाए गए छेद और छिद्रों के चारों ओर कीट की गंदगी; ओंग कैटरपिलर काले
+                सिर और काले बालों के साथ क्रीम-सफ़ेद रंग के होते हैं; पुराने लार्वा पीले-हरे से लेकर लगभग काले रंग
+                के हो सकते हैं, उनके शरीर पर बारीक सफेद रेखाएं और बालों के आधार पर काले धब्बे होते हैं; अंडे पत्तियों
+                की ऊपरी और निचली दोनों सतहों पर अकेले दिए जाते हैं और शुरू में मलाईदार सफेद होते हैं, लेकिन 24 घंटों
+                के बाद भूरे-लाल रंग की अंगूठी विकसित करते हैं और अंडे सेने से पहले गहरे रंग के हो जाते हैं।
+            </p>
+            <p>
+                बोंडांच्या तळांमध्ये चघळलेली छिद्रे आणि छिद्रांभोवती कीटक फरसाण; ओंग सुरवंट काळ्या डोके आणि काळ्या
+                केसांसह क्रीम-पांढर्या रंगाचे असतात; जुन्या अळ्या पिवळ्या-हिरव्या ते जवळजवळ काळ्या रंगाच्या असू शकतात,
+                त्यांच्या शरीरावर बारीक पांढऱ्या रेषा असतात आणि केसांच्या पायथ्याशी काळे डाग असतात; अंडी पानांच्या
+                वरच्या
+                आणि खालच्या दोन्ही पृष्ठभागावर एकट्याने घातली जातात आणि सुरुवातीला मलईदार पांढरी असतात परंतु 24
+                तासांनंतर
+                तपकिरी-लाल रिंग विकसित होतात आणि अंड्यातून बाहेर येण्यापूर्वी गडद होतात.
+            </p>
+
+        </div>
+        <div>
+            <img src="../static/images/Cotton bollworm.webp" alt="Cotton Disease Symptoms" width="500" height="500">
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            Thanks for visiting ❤️
+        </div>
+    </footer>
+</body>
+
+</html>
+
+
+
+
+
+
+
+<!-- css for this page -->
+<!-- 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 20px;
+}
+
+h1 {
+    color: #004080;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 30px;
+}
+
+
+.text {
+    flex: 1;
+    padding: 50px;
+}
+
+img {
+    max-width: 100%;
+    height: 400px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    width: 300px;
+    border-radius: 20px;
+    margin: 40px;
+
+
+
+    /* --s: 250px; */
+    /* the size of the image */
+    /* --b: 8px; */
+    /* the border thickness*/
+    /* --g: 14px; */
+    /* the gap */
+    /* --c: #6382a0; */
+    /* the color */
+
+    width: var(--s);
+    aspect-ratio: 1;
+    outline: calc(var(--s)/2) solid #0009;
+    outline-offset: calc(var(--s)/-2);
+    cursor: pointer;
+    transition: .3s;
+
+}
+
+img:hover {
+    outline: var(--b) solid var(--c);
+    outline-offset: var(--g);
+}
+
+h2 {
+    color: #0066cc;
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.main {
+    font-size: 20px;
+    text-align: centre;
+    color: #0066cc;
+}
+
+/* .navbar {
+    width: 100%;
+    height: 70px;
+    background-color: #e9ecef;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    /* border-bottom: ; */
+/* } */
+
+/* 
+.navbar a {
+    float: left;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    margin-right: 150px;
+    margin-left: 100px; */
+/* } */
+
+
+
+/* @media screen and (max-width: 768px) {
+    .navbar {
+        height: auto;
+
+    }
+
+    .navbar a {
+        float: none;
+        display: block;
+        text-align: center;
+        color: white;
+    }
+/* } */ 
+
+</style> -->

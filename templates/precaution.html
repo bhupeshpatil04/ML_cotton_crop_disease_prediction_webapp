@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precautions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F5F5FA;
+            color: #333;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        h1 {
+            color: #004080;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 20px;
+        }
+
+        .text {
+            flex: 1;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: 400px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            width: 300px;
+            border-radius: 20px;
+            margin: 40px;
+
+
+
+            /* --s: 250px;   the size of the image */
+            /* --b: 8px;     the border thickness */
+            /* --g: 14px;    the gap */
+            /* the color  --c: #004080;  */
+
+            width: var(--s);
+            aspect-ratio: 1;
+            outline: calc(var(--s)/2) solid #0009;
+            outline-offset: calc(var(--s)/-2);
+            cursor: pointer;
+            transition: .3s;
+
+        }
+
+        img:hover {
+            outline: var(--b) solid var(--c);
+            outline-offset: var(--g);
+        }
+
+        h2 {
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .container1 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .container2 {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .main {
+            font-size: 20px;
+            text-align: centre;
+            color: #0066cc;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 65px;
+            background-color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: right;
+            /* Align items to the right and left */
+            align-items: center;
+            /* Center items vertically */
+            font-size: 1.1rem;
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .2);
+        }
+
+        .navbar a {
+            color: #333;
+            text-decoration: none;
+            padding: 14px 21px;
+            margin-right: 22px;
+        }
+        
+        .navbar a:last-child {
+            float: right;
+            /* Align the "Login" link to the right */
+            background-color: #4CAF50;
+            /* Adding a background color for the "Login" link */
+            color: #fff;
+            /* Changing text color for the "Login" link */
+            border-radius: 5px;
+            /* Adding border-radius for a button-like appearance */
+            /* height: 20px; */
+        }
+        
+        .navbar a:last-child:hover {
+            background-color: #45a049;
+            /* Change background color on hover */
+        }
+
+        
+        
+        @media screen and (max-width: 768px) {
+            .navbar {
+                height: auto;
+            }
+            
+            .navbar a {
+                float: none;
+                display: block;
+                text-align: center;
+                color: white;
+            }
+        }
+        
+        .footer {
+            background-color: #333333e6;
+            height: 60px;
+            font-size: 1.17rem;
+            text-align: center;
+            justify-content: center;
+            color: black;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('symptoms') }}">Symptoms</a>
+        <a href="{{ url_for('precaution') }}">Precaution</a>
+        <a href="{{ url_for('login') }}">Login</a>
+    </div>
+    
+
+    <!-- <h1>Cotton Disease Precaution</h1> -->
+
+    <!-- <a href="index.html" class="previous">&laquo; Previous</a> -->
+
+    <div class="container">
+        <div class="text">
+            <h2>Cotton bollworm</h2>
+            <p>
+                Manage cotton bollworm by planting Bt cotton varieties, employing biological
+                control with natural predators like Trichogramma wasps, and practicing crop rotation.
+                Implementing Integrated Pest Management (IPM) strategies that judiciously use
+                chemical insecticides can further enhance bollworm control while minimizing environmental impact.
+
+            </p>
+            <p>
+                बीटी कपास की किस्मों को रोपकर, ट्राइकोग्रामा ततैया जैसे प्राकृतिक शिकारियों के साथ जैविक नियंत्रण का
+                उपयोग करके और फसल चक्र का अभ्यास करके कपास बॉलवर्म का प्रबंधन करें। रासायनिक कीटनाशकों का
+                विवेकपूर्ण उपयोग करने वाली एकीकृत कीट प्रबंधन (आईपीएम) रणनीतियों को लागू करने से पर्यावरणीय प्रभाव
+                को कम करते हुए बॉलवर्म नियंत्रण को और बढ़ाया जा सकता है।
+            </p>
+            <p>
+                बीटी कापसाच्या वाणांची लागवड करून, ट्रायकोग्रामा वॅस्प्स सारख्या नैसर्गिक भक्षकांसह जैविक नियंत्रण
+                वापरून
+                आणि पीक रोटेशनचा सराव करून कापूस बोंडअळीचे व्यवस्थापन करा. एकात्मिक कीड व्यवस्थापन (IPM) धोरणांची
+                अंमलबजावणी करणे ज्यात रासायनिक कीटकनाशकांचा न्याय्यपणे वापर केल्यास पर्यावरणावरील प्रभाव कमी करताना
+                बोंडअळी
+                नियंत्रण अधिक वाढू शकते.
+            </p>
+
+        </div>
+        <div>
+            <img src="../static/images/Cotton bollworm.webp" alt="Cotton Disease Symptoms" width="500" height="500">
+        </div>
+    </div>
+    
+    <div class="container container2">
+        <div class="text">
+            <h2>Asochyta blight Asochyta gossypii</h2>
+            <p>
+                To prevent Ascochyta blight in cotton caused by Ascochyta gossypii,
+                choose resistant varieties, practice crop rotation, and promptly
+                remove infected plant debris. Consider fungicide applications based
+                on local guidelines to manage the disease effectively.
+            </p>
+            <p>
+                कपास में एस्कोकाइटा गॉसिपी के कारण होने वाले एस्कोकाइटा ब्लाइट को रोकने के लिए,
+                प्रतिरोधी किस्मों का चयन करें, फसल चक्र का अभ्यास करें और संक्रमित पौधे के अवशेषों
+                को तुरंत हटा दें। रोग को प्रभावी ढंग से प्रबंधित करने के लिए स्थानीय दिशानिर्देशों के
+                आधार पर कवकनाशी अनुप्रयोगों पर विचार करें।
+            </p>
+            <p>
+                Ascochyta gossypii मुळे कापसावर होणारा Ascochyta Blight टाळण्यासाठी, प्रतिरोधक
+                वाण निवडा, पीक फिरवण्याचा सराव करा आणि संक्रमित झाडाचा मोडतोड ताबडतोब काढून टाका.
+                रोगाचे प्रभावीपणे व्यवस्थापन करण्यासाठी स्थानिक मार्गदर्शक तत्त्वांवर आधारित बुरशीनाशक वापराचा विचार
+                करा.
+            </p>
+
+        </div>
+        <div>
+            <img src="../static/images/Asochyta blight Asochyta gossypii.jpg" alt="Cotton Disease Symptoms" width="500"
+                height="500">
+        </div>
+    </div>
+    <div class="container">
+        <div class="text">
+            <h2>Aphids (Cotton aphid)</h2>
+            <p>
+                As cotton aphid has developed widespread resistance to many insecticides,
+                it is important not to rely on insecticides alone and where available,
+                consult industry Insecticide Resistance Management Strategies. In cotton,
+                it is recommended that aphid levels be monitored at least weekly from
+                seedling emergence through to defoliation.
+            </p>
+            <p>
+                चूंकि कपास एफिड ने कई कीटनाशकों के प्रति व्यापक प्रतिरोध विकसित कर लिया है,
+                इसलिए यह महत्वपूर्ण है कि केवल कीटनाशकों पर निर्भर न रहें और जहां उपलब्ध हो,
+                उद्योग कीटनाशक प्रतिरोध प्रबंधन रणनीतियों से परामर्श लें। कपास में, यह अनुशंसा की
+                जाती है कि अंकुर निकलने से लेकर पत्ते गिरने तक एफिड स्तर की कम से कम साप्ताहिक निगरानी की जाए।
+            </p>
+            <p>
+                कापूस ऍफिडने अनेक कीटकनाशकांना व्यापक प्रतिकार विकसित केल्यामुळे, केवळ कीटकनाशकांवर अवलंबून न राहणे
+                महत्त्वाचे आहे आणि जेथे उपलब्ध असेल, उद्योग कीटकनाशक प्रतिकार व्यवस्थापन धोरणांचा सल्ला घ्या.
+                कपाशीमध्ये, रोपे उगवण्यापासून ते क्षीण होण्यापर्यंत ऍफिडच्या पातळीचे किमान साप्ताहिक निरीक्षण करण्याची
+                शिफारस केली जाते.
+            </p>
+
+        </div>
+        <div>
+            <img src="../static/images/Aphids (Cotton aphid).jpg" alt="Cotton Disease Symptoms" width="400"
+                height="400">
+        </div>
+    </div>
+    <div class="container container2">
+        <div class="text">
+            <h2>Fusarium wilt</h2>
+            <p>
+                Strategies for the management of Fusarium wilt include clean cotton seed, resistant
+                cultivars, sanitation and the reduction of inoculum density. In some cases race-specific
+                strategies are effective. Fusarium wilt caused by race 1 and race 2, for example, can be
+                managed by the reduction of nematode populations and the use of nematode resistant cultivars
+            </p>
+            <p>
+                फ्यूजेरियम विल्ट के प्रबंधन की रणनीतियों में स्वच्छ कपास के बीज, प्रतिरोधी किस्में, स्वच्छता और इनोकुलम
+                घनत्व
+                में कमी शामिल है। कुछ मामलों में नस्ल-विशिष्ट रणनीतियाँ प्रभावी होती हैं। उदाहरण के लिए, रेस 1 और रेस 2
+                के कारण होने वाले फ्यूजेरियम विल्ट को नेमाटोड आबादी में कमी और नेमाटोड प्रतिरोधी किस्मों के उपयोग से
+                प्रबंधित किया जा सकता है।
+            </p>
+            <p>
+                फ्युसेरियम विल्टच्या व्यवस्थापनासाठीच्या धोरणांमध्ये स्वच्छ कापूस बियाणे, प्रतिरोधक लागवड, स्वच्छता आणि
+                इनोकुलम घनता कमी करणे समाविष्ट आहे. काही प्रकरणांमध्ये वंश-विशिष्ट धोरण प्रभावी आहेत. उदाहरणार्थ,
+                रेस 1 आणि रेस 2 मुळे होणारे फ्युसेरियम विल्ट, नेमाटोड लोकसंख्या कमी करून आणि नेमाटोड प्रतिरोधक
+                जातींच्या वापराद्वारे व्यवस्थापित केले जाऊ शकते
+            </p>
+
+        </div>
+        <div>
+            <img src="../static/images/Fusarium wilt.png" alt="Cotton Disease Symptoms" width="500" height="500">
+        </div>
+    </div>
+    <div class="container">
+        <div class="text">
+            <h2>Target spot</h2>
+            <p>
+                The most effective fungicide for management of target spot is Priaxor (4-6 fl oz/A).
+                Miravis Top (13.6 fl oz/A) has also been a very good fungicide. Headline (6 fl oz/A)
+                is likely our next best option for control of target spot, followed by azoxystrobin
+                products such as Quadris and AzoxyStar (both at 6 or 9 fl oz/A).
+            </p>
+            <p>
+                लक्षित स्थान के प्रबंधन के लिए सबसे प्रभावी कवकनाशी प्रियाक्सोर (4-6 फ़्लूड आउंस/ए) है। मिराविस टॉप
+                (13.6 फ़्लूड आउंस/ए)
+                भी एक बहुत अच्छा कवकनाशी है। लक्ष्य स्थान पर नियंत्रण के लिए हेडलाइन (6 फ़्लूड आउंस/ए) संभवतः हमारा अगला
+                सबसे अच्छा विकल्प है, इसके बाद एज़ोक्सीस्ट्रोबिन उत्पाद जैसे क्वाड्रिस और एज़ोक्सीस्टार (दोनों 6 या 9
+                फ़्लू आउंस/ए) हैं।
+            </p>
+            <p>
+                टार्गेट स्पॉटच्या व्यवस्थापनासाठी सर्वात प्रभावी बुरशीनाशक आहे Priaxor (4-6 fl oz/A). मिराव्हिस टॉप
+                (13.6 fl oz/A) हे देखील
+                खूप चांगले बुरशीनाशक आहे. हेडलाइन (6 fl oz/A) हा टार्गेट स्पॉटच्या नियंत्रणासाठी आमचा पुढचा सर्वोत्तम
+                पर्याय आहे, त्यानंतर क्वाड्रिस
+                आणि अझोक्सीस्टार (दोन्ही 6 किंवा 9 fl oz/A) सारखी अझोक्सीस्ट्रोबिन उत्पादने.
+            </p>
+
+        </div>
+        <div>
+            <img src="../static/images/Target spot.jpg" alt="Cotton Disease Symptoms" width="400" height="300">
+        </div>
+    </div>
+    <div class="container container2">
+        <div class="text">
+            <h2>Bacterial blight/angular leaf spot of cotton</h2>
+            <p>
+                Delint the cotton seeds with concentrated sulphuric acid at 100ml/kg of seed.
+                Treat the delinted seeds with Carboxin or Oxycarboxin at 2 g/kg or
+                Carboxin 37.5% + Thiram 37.5% WS @2.5 g/ kg Remove and destroy the
+                infected plant debris. Rogue out the volunteer cotton plants and weed hosts.
+                Follow crop rotation with non-host crops.
+            </p>
+            <p>
+                कपास के बीजों को 100 मि.ली./कि.ग्रा. बीज के हिसाब से सांद्र सल्फ्यूरिक एसिड से साफ करें।
+                कटे हुए बीजों को कार्बोक्सिन या ऑक्सीकारबॉक्सिन 2 ग्राम/किग्रा या कार्बोक्सिन 37.5% +
+                थीरम 37.5% डब्लूएस @2.5 ग्राम/किलो से उपचारित करें, संक्रमित पौधे के मलबे को हटा दें
+                और नष्ट कर दें। स्वयंसेवी कपास के पौधों और खरपतवार मेजबानों को नष्ट करें। गैर-मेज़बान फसलों के साथ फसल
+                चक्र का पालन करें।
+            </p>
+            <p>
+                कापूस बियाणे 100 मिली/किलो बियाण्यावर केंद्रित सल्फ्यूरिक ऍसिडसह डिलिंट करा. 2 ग्रॅम/किलो किंवा
+                कार्बॉक्सिन 37.5% + थिराम 37.5% डब्ल्यूएस @2.5 ग्रॅम/किलो या प्रमाणात कार्बोक्झिन किंवा
+                ऑक्सिकार्बोक्झिनने
+                डिलिंट केलेल्या बियाण्यांवर प्रक्रिया करा आणि संक्रमित झाडाचा मोडतोड काढा आणि नष्ट करा. स्वयंसेवक कापूस
+                रोपे आणि तण यजमानांना बाहेर काढा. यजमान नसलेल्या पिकांसह पीक रोटेशनचे अनुसरण करा.
+            </p>
+
+        </div>
+        <div>
+            <img src="../static/images/Bacterial blight angular leaf spot of cotton.jpg" alt="Cotton Disease Symptoms"
+                width="500" height="500">
+        </div>
+    </div>
+   
+    <div class="container">
+        <div class="text">
+            <h2>Cercospora leaf spot</h2>
+            <p>
+                Remove and destroy the infected plant residues.
+                Spray Mancozeb @ 400g/ acre or Copper oxychloride
+                @ 500 g/ acre or Carbendazim 50% WP @ 200g/acre or
+                Propiconazole @ 200 ml/ acre or Metiram 55% + Pyraclostrobin
+                5% WG @ 200g/acre or Kresoxim-methyl 44.3% SC @ 200 ml/ acre at the intimation of the disease.
+            </p>
+            <p>
+                संक्रमित पौधे के अवशेषों को हटा कर नष्ट कर दें.
+                मैन्कोजेब @ 400 ग्राम/एकड़ या कॉपर ऑक्सीक्लोराइड @500 ग्राम/एकड़ या कार्बेन्डाजिम 50% WP @200 ग्राम/एकड़
+                या प्रोपिकोनाज़ोल @200 मिली/एकड़ या
+                मेटिरम 55% + पायराक्लोस्ट्रोबिन 5% WG @ 200 ग्राम/एकड़ या क्रेसोक्सिम-मिथाइल 44.3% एससी का छिड़काव करें।
+                रोग की सूचना पर 200 मि.ली. प्रति एकड़ की दर से।
+            </p>
+            <p>
+                संक्रमित वनस्पतींचे अवशेष काढून टाका आणि नष्ट करा.
+                मॅन्कोझेब @ 400 ग्रॅम/ एकर किंवा कॉपर ऑक्‍सिक्लोराईड
+                @ 500 ग्रॅम/ एकर किंवा कार्बेन्डाझिम 50% डब्ल्यूपी @ 200 ग्रॅम/एकर किंवा
+                प्रोपिकोनाझोल @ 200 मिली/एकर किंवा मेटीराम 55% + पायराक्लोस्ट्रोबिन 5% डब्ल्यूजी
+                @ 200%-3 ग्रॅम/4 क्र. @ 200 मि.ली./एकर रोगाच्या सूचनावर.
+            </p>
+
+        </div>
+        <div>
+            <img src="../static/images/Cercospora leaf spot.jpg" alt="Cotton Disease Symptoms" width="500" height="500">
+        </div>
+    </div>
+    <div class="container container2">
+        <div class="text">
+            <h2>Armyworm</h2>
+            <p>
+                Currently, the most effective means to control fall armyworms is to plant Bt cotton.
+                Third generation Bt cottons with three toxins (Bollgard 3, WideStrike 3, TwinLink Plus)
+                develop lower fall armyworm populations compared with second generation Bt cotton. However,
+                areas with heavy fall armyworm pressure may occasionally require treatment
+            </p>
+            <p>
+                वर्तमान में, फॉल आर्मीवर्म को नियंत्रित करने का सबसे प्रभावी साधन बीटी कपास लगाना है। तीन विषाक्त
+                पदार्थों
+                (बोल्गार्ड 3, वाइडस्ट्राइक 3, ट्विनलिंक प्लस) के साथ तीसरी पीढ़ी के बीटी कॉटन में दूसरी पीढ़ी के बीटी
+                कॉटन
+                की तुलना में कम गिरावट वाली आर्मीवर्म आबादी विकसित होती है। हालाँकि, भारी गिरावट वाले आर्मीवर्म दबाव
+                वाले क्षेत्रों में कभी-कभी उपचार की आवश्यकता हो सकती है
+            </p>
+            <p>
+                सध्या, फॉल आर्मीवर्म्स नियंत्रित करण्यासाठी सर्वात प्रभावी साधन म्हणजे बीटी कपाशीची लागवड करणे.
+                तिसऱ्या पिढीतील बीटी कापूस ज्यामध्ये तीन विष असतात (बोलगार्ड 3, वाइडस्ट्राइक 3, ट्विनलिंक प्लस)
+                दुसऱ्या पिढीच्या बीटी कपाशीच्या तुलनेत कमी फॉल आर्मीवॉर्मची संख्या विकसित करतात. तथापि, आर्मीवॉर्मचा
+                जास्त दबाव असलेल्या भागात कधीकधी उपचार आवश्यक असू शकतात.
+            </p>
+
+        </div>
+        <div>
+            <img src="../static/images/Armyworm.png" alt="Cotton Disease Symptoms" width="500" height="500">
+        </div>
+    </div>
+    <div class="container container1">
+        <div class="text">
+            <h2>Alternaria</h2>
+            <p>
+                To prevent Alternaria leaf spot in cotton, practice
+                crop rotation, choose resistant varieties, maintain
+                good sanitation by removing infected plant debris,
+                ensure proper plant spacing for adequate air circulation,
+                and consider timely fungicide applications based on local
+                recommendations. Regular monitoring for early detection and
+                staying informed about effective management practices are
+                crucial for minimizing the impact of the disease.
+            </p>
+            <p>
+                कपास में अल्टरनेरिया लीफ स्पॉट को रोकने के लिए, फसल चक्र का अभ्यास करें,
+                प्रतिरोधी किस्मों का चयन करें, संक्रमित पौधों के मलबे को हटाकर अच्छी स्वच्छता
+                बनाए रखें, पर्याप्त वायु परिसंचरण के लिए पौधों के बीच उचित दूरी सुनिश्चित करें और
+                स्थानीय सिफारिशों के आधार पर समय पर कवकनाशी अनुप्रयोगों पर विचार करें।
+                रोग का शीघ्र पता लगाने के लिए नियमित निगरानी और प्रभावी प्रबंधन प्रथाओं के
+                बारे में सूचित रहना बीमारी के प्रभाव को कम करने के लिए महत्वपूर्ण है
+            </p>
+            <p>
+                कपाशीमध्ये अल्टरनेरिया पानांचे ठिपके रोखण्यासाठी, पीक रोटेशनचा सराव करा,
+                प्रतिरोधक वाण निवडा, संक्रमित वनस्पती मोडतोड काढून चांगली स्वच्छता राखा,
+                पुरेशा हवेच्या अभिसरणासाठी रोपातील योग्य अंतर सुनिश्चित करा आणि स्थानिक
+                शिफारशींच्या आधारे वेळेवर बुरशीनाशक वापरण्याचा विचार करा. रोगाचा प्रभाव
+                कमी करण्यासाठी लवकर ओळखण्यासाठी नियमित निरीक्षण आणि प्रभावी व्यवस्थापन
+                पद्धतींबद्दल माहिती असणे महत्त्वाचे आहे.
+            </p>
+
+        </div>
+        <div>
+            <img src="../static/images/alternaria-leaf-spot.jpg" alt="Cotton Disease Symptoms" width="500" height="500">
+        </div>
+    </div>
+    
+
+    <footer>
+        <div class="footer">
+            Thanks for visiting ❤️
+        </div>
+    </footer>
+</body>
+
+</html>
