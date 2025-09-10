@@ -10,7 +10,7 @@ from keras.preprocessing.image import img_to_array
 from keras.models import load_model
  
 #load model
-model =load_model("model/model_inception.h5")
+model =load_model("model_inception.h5")
  
 print('@@ Model loaded')
  
